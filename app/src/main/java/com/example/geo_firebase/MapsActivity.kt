@@ -39,10 +39,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-
+        mMap.uiSettings.isZoomControlsEnabled=true //Hago visible los botones para apliar y desampliar el mapa
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val danielCastelao = LatLng(42.2364255, -8.7163505)
+        mMap.addMarker(MarkerOptions().position(danielCastelao).title("Centro Especializado en la exclavitud"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(danielCastelao))
+
     }
 }
